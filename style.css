@@ -1,29 +1,224 @@
-p {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+/* General reset */
+* {
+    box-sizing: border-box;
 }
 
-h1 {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+html,
+body {
+    margin: 0;
+    min-height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #111;
+    background: #f7f8fa;
 }
 
-label {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+body {
+    min-height: 100vh;
 }
 
+/* Main two-column layout */
 #whole-page {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 38% 62%;
+    min-height: 100vh;
 }
 
-#whole-page #image {
-    width: 80vw;
-    height: 720px;
+/* Left image section */
+#image {
+    position: relative;
     overflow: hidden;
+    min-height: 100vh;
+    background-color: #18351f;
 }
 
-#whole-page #image img {
+#image img {
+    display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center;
+}
+
+/* Optional dark overlay over the image */
+#image::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.12);
+    pointer-events: none;
+}
+
+/* Right form section */
+#sign-form {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    background: #f8f9fb;
+}
+
+form {
+    width: 100%;
+}
+
+/* Top text section */
+#heading {
+    padding: 0 8vw 2.5rem 4vw;
+    max-width: 850px;
+}
+
+#header h1 {
+    margin: 0 0 1.25rem;
+    font-size: clamp(1.6rem, 2.4vw, 2.7rem);
+    line-height: 1.1;
+}
+
+#info p {
+    max-width: 650px;
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Form fields background */
+#fields {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(180px, 1fr));
+    gap: 2rem;
+    padding: 2rem 8vw 2rem 4vw;
+    background: #ffffff;
+    box-shadow:
+        0 3px 8px rgba(0, 0, 0, 0.12),
+        0 -1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* Each column */
+#first-col,
+#second-col {
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+}
+
+/* Individual field */
+#fields > div > div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+label {
+    color: #333;
+    font-size: 0.75rem;
+    font-weight: bold;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+input {
+    width: 100%;
+    height: 2.25rem;
+    padding: 0.4rem 0.6rem;
+    border: none;
+    border-bottom: 1px solid #c8cdd1;
+    outline: none;
+    background: transparent;
+    font: inherit;
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+input:focus {
+    border-bottom: 2px solid #596f52;
+    box-shadow: 0 2px 0 #596f52;
+}
+
+/* Validation styles */
+input:invalid:not(:placeholder-shown) {
+    border-bottom-color: #b44343;
+}
+
+/* Submit button */
+#create-account-button {
+    padding: 2rem 8vw 0 4vw;
+}
+
+button {
+    min-width: 180px;
+    padding: 0.85rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    background: #596f52;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+button:hover {
+    background: #43583d;
+    transform: translateY(-1px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* Login text */
+#log-in-link {
+    padding: 1.3rem 8vw 0 4vw;
+}
+
+#log-in-link p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+a {
+    color: #596f52;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive layout */
+@media (max-width: 750px) {
+    #whole-page {
+        display: block;
+    }
+
+    #image {
+        height: 250px;
+        min-height: 250px;
+    }
+
+    #sign-form {
+        display: block;
+        min-height: auto;
+        padding: 2rem 0 3rem;
+    }
+
+    #heading,
+    #fields,
+    #create-account-button,
+    #log-in-link {
+        padding-left: 7vw;
+        padding-right: 7vw;
+    }
+
+    #fields {
+        grid-template-columns: 1fr;
+        gap: 1.3rem;
+    }
+
+    #first-col,
+    #second-col {
+        gap: 1.3rem;
+    }
 }
