@@ -10,24 +10,46 @@
         <div id="whole_page">
             <div id="image"></div>
             <div id="sign-form">
-                <div id="heading">
-                    <div id="header"></div>
-                    <div id="info"></div>
-                </div>
-                <div id="fields">
-                    <div id="first-col">
-                        <div id="first-name-field"></div>
-                        <div id="email-field"></div>
-                        <div id="password-field"></div>
+                <form action="https://httpbin.org/post" method="post">
+                    <div id="heading">
+                        <div id="header"></div>
+                        <div id="info"></div>
                     </div>
-                    <div id="second-col">
-                        <div id="last-name-field"></div>
-                        <div id="phone-num-field"></div>
-                        <div id="confirm-pass-field"></div>
+                    <div id="fields">
+                        <div id="first-col">
+                            <div id="first-name-field">
+                                <label for="first-name">First Name:</label>
+                                <input type="text" name="first-name" id="first-name" />
+                            </div>
+                            <div id="email-field">
+                                <label for="email">Email:</label>
+                                <input type="email" name="email" id="email" />
+                            </div>
+                            <div id="password-field">
+                                <label for="password">Password:</label>
+                                <input type="password" name="password" id="password" />
+                            </div>
+                        </div>
+                        <div id="second-col">
+                            <div id="last-name-field">
+                                <label for="last-name">Last Name:</label>
+                                <input type="text" name="last-name" id="last-name" />
+                            </div>
+                            <div id="phone-num-field">
+                                <label for="phone-num">Phone Number:</label>
+                                <input type="number" name="phone-num" id="phone-num" />
+                            </div>
+                            <div id="confirm-pass-field">
+                                <label for="password">Confirm Password:</label>
+                                <input type="password" name="confirm-pass" id="confirm-pass" />
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div id="create-account-button"></div>
-                <div id="log-in-link"></div>
+                    <div id="create-account-button">
+                        <button type="submit">Submit</button>
+                    </div>
+                    <div id="log-in-link"></div>
+                </form>
             </div>
         </div>
     </body>
