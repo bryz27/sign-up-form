@@ -1,107 +1,77 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Sign Up Form</title>
-        <link rel="stylesheet" href="style.css" />
-    </head>
-    <body>
-        <div id="whole-page">
-            <div id="image">
-                <img
-                    src="img/wp5125439.jpg"
-                    alt="Source: https://wallpapercave.com/wp/wp5125439.jpg"
-                />
-            </div>
-            <div id="sign-form">
-                <form action="https://httpbin.org/post" method="post">
-                    <div id="heading">
-                        <div id="header"><h1>Nice for you to be here</h1></div>
-                        <div id="info">
-                            <p>
-                                Okay this is not a real online service! You need something
-                                likedfsllwlhk.... Lorem ipsum, dolor sit amet consectetur
-                                adipisicing elit. Non suscipit nobis aperiam reiciendis, laborum
-                                maxime aliquam laboriosam explicabo velit qui? At harum tempora,
-                                quas porro aliquam nostrum ex quidem omnis!
-                            </p>
-                        </div>
-                    </div>
-                    <div id="fields">
-                        <div id="first-col">
-                            <div id="first-name-field">
-                                <label for="first-name">First Name:</label>
-                                <input
-                                    type="text"
-                                    name="first-name"
-                                    id="first-name"
-                                    placeholder="Your first name here"
-                                    required
-                                />
-                            </div>
-                            <div id="email-field">
-                                <label for="email">Email:</label>
-                                <input
-                                    type="email"
-                                    name="email"
-                                    id="email"
-                                    placeholder="you@example.com"
-                                    required
-                                />
-                            </div>
-                            <div id="password-field">
-                                <label for="password">Password:</label>
-                                <input
-                                    type="password"
-                                    name="password"
-                                    id="password"
-                                    placeholder="Create a password"
-                                    required
-                                />
-                            </div>
-                        </div>
-                        <div id="second-col">
-                            <div id="last-name-field">
-                                <label for="last-name">Last Name:</label>
-                                <input
-                                    type="text"
-                                    name="last-name"
-                                    id="last-name"
-                                    placeholder="Your last name here"
-                                    required
-                                />
-                            </div>
-                            <div id="phone-num-field">
-                                <label for="phone-num">Phone Number:</label>
-                                <input
-                                    type="number"
-                                    name="phone-num"
-                                    id="phone-num"
-                                    placeholder="0123456789"
-                                    required
-                                />
-                            </div>
-                            <div id="confirm-pass-field">
-                                <label for="confirm-pass">Confirm Password:</label>
-                                <input
-                                    type="password"
-                                    name="confirm-pass"
-                                    id="confirm-pass"
-                                    placeholder="Confirm password"
-                                    required
-                                />
-                            </div>
-                        </div>
-                    </div>
-                    <div id="create-account-button">
-                        <button type="submit">Create an account</button>
-                    </div>
-                    <div id="log-in-link">
-                        <p>Already have an account? <a href="https://httpbin.org/">Log In</a></p>
-                    </div>
-                </form>
-            </div>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up Form</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div id="whole-page">
+        <div id="image">
+            <img src="img/wp5125439.jpg" alt="Source: https://wallpapercave.com/wp/wp5125439.jpg" />
         </div>
-    </body>
+        <div id="sign-form">
+            <form action="https://httpbin.org/post" method="post">
+                <div id="heading">
+                    <div id="header">
+                        <h1>Nice for you to be here</h1>
+                    </div>
+                    <div id="info">
+                        <p>
+                            Okay this is not a real online service! You need something
+                            likedfsllwlhk.... Lorem ipsum, dolor sit amet consectetur
+                            adipisicing elit. Non suscipit nobis aperiam reiciendis, laborum
+                            maxime aliquam laboriosam explicabo velit qui? At harum tempora,
+                            quas porro aliquam nostrum ex quidem omnis!
+                        </p>
+                    </div>
+                </div>
+                <div id="fields">
+                    <div id="first-col">
+                        <div id="first-name-field">
+                            <label for="first-name">First Name:</label>
+                            <input type="text" name="first-name" id="first-name" placeholder="Your first name here"
+                                required />
+                        </div>
+                        <div id="email-field">
+                            <label for="email">Email:</label>
+                            <input type="email" name="email" id="email" placeholder="you@example.com" required />
+                        </div>
+                        <div id="password-field">
+                            <label for="password">Password:</label>
+                            <input type="password" name="password" id="password" placeholder="Create a password"
+                                required />
+                        </div>
+                    </div>
+                    <div id="second-col">
+                        <div id="last-name-field">
+                            <label for="last-name">Last Name:</label>
+                            <input type="text" name="last-name" id="last-name" placeholder="Your last name here"
+                                required />
+                        </div>
+                        <div id="phone-num-field">
+                            <label for="phone-num">Phone Number:</label>
+                            <input type="number" name="phone-num" id="phone-num" placeholder="0123456789" required />
+                        </div>
+                        <div id="confirm-pass-field">
+                            <label for="confirm-pass">Confirm Password:</label>
+                            <input type="password" name="confirm-pass" id="confirm-pass" placeholder="Confirm password"
+                                required />
+                        </div>
+                    </div>
+                </div>
+                <div id="create-account-button">
+                    <button type="submit">Create an account</button>
+                </div>
+                <div id="log-in-link">
+                    <p>Already have an account? <a href="https://httpbin.org/">Log In</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
 </html>

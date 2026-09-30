@@ -100,7 +100,7 @@ form {
 }
 
 /* Individual field */
-#fields > div > div {
+#fields>div>div {
     display: flex;
     flex-direction: column;
     gap: 0.35rem;
